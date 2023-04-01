@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Export",
+  "description": "Export your chat with ChatGPT in a PNG or PDF format",
+  "version": "1.0.0",
+  "author": "Dhruv Singh",
+  "icons": {
+    "48": "icons/48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": [
+        "scripts/html2canvas.min.js",
+        "scripts/jspdf.umd.min.js",
+        "content_script.js"
+      ]
+    }
+  ]
+}
+
